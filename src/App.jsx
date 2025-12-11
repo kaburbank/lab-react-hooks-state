@@ -16,13 +16,11 @@ const [darkMode, setDarkMode] = useState(false);
     setCart(prevCart => [...prevCart, product]);
   };
 
-
   // TODO: Implement state for category filtering
   const [selectedCategory, setSelectedCategory] = useState('all');
   function categoryChange(event) {
     setSelectedCategory(event.target.value);
   };
-
 
   return (
     <div>
