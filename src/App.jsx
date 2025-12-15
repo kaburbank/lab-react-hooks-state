@@ -23,7 +23,7 @@ const [darkMode, setDarkMode] = useState(false);
   };
 
   return (
-    <div>
+    <div className={darkMode ? "dark-mode" : "light-mode"}>
       <h1>🛒 Shopping App</h1>
       <p>
         Welcome! Your task is to implement filtering, cart management, and dark
@@ -31,8 +31,7 @@ const [darkMode, setDarkMode] = useState(false);
       </p>
 
       {/* TODO: Render DarkModeToggle and implement dark mode functionality */}
-      <div className={`app ${darkMode ? 'dark' : 'light'}`}>
-        <DarkModeToggle onToggle={handleToggleDarkMode} isDarkMode={darkMode} />
+      <DarkModeToggle onToggle={handleToggleDarkMode} isDarkMode={darkMode} />
       
       {/* TODO: Implement category filter dropdown */}
       <label>Filter by Category: </label>
@@ -46,7 +45,7 @@ const [darkMode, setDarkMode] = useState(false);
       <ProductList addToCart={addToCart} category={selectedCategory} />
 
       <Cart cartItems={cart} />
-      </div>
+    
   </div>
   );
 };
